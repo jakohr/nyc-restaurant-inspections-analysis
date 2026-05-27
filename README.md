@@ -33,6 +33,8 @@ During cleaning we used Python using pandas within a Juypter Notebook to:
 
 One challenge that we had during our analysis was that the original demographic data set sourced from Kaggle, that we left joined into the inspection data set on ZIP code, only provided median income information aggregated by borough. So when initially building our dashboards with that merged data we were only able to evaluate on the borough level as each ZIP code within the same borough incorrectly had the same median income attached to it. That's why we ended up brining in the Census ACS API to adress this as it allowed us to get unique median household income estimates for every ZIP code. We then merged those values into the final dataset using ZIP code as the join key. The remaining other demographic variables from the Kaggle dataset rwere retained in the final merged dataset, just this time the median household income data was by ZIP code. 
 
+Finally, after cleaning and merging the datasets correctly, our final dataset had roughly 80,000 inspection oberservations and 16 key vairables, or columns, to use throughout our Tableau dashboards. The final dataset was then exported as a CSV file and connected directly into Tableau to begin developing the dashboards. In addition to the final CSV file, we've also included our full Juypter Notebook in this repository that documents our complete cleaning and sourcing process. 
+
 Use of LLMs/Chat GPT: 
 
-
+We used ChatGPT as a supplementary tool as part of the cleaning and preparation stages. We used it to help understand what aspects of the data should still be cleaned to achieve our desired final data set, strucutre aspects of our code like API calls and other pandas code, and troubleshoot and debug issues that would arise. 
