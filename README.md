@@ -2,7 +2,6 @@
 
 **Jack Kohr and Alex Casarella | BUS 32130: Data Visualization for Decision-Making | Spring 2026**
 
-
 ## Project Question
 
 This project explores patterns in New York City restaurant health inspections using demographic data and Tableau dashboards. Our analysis investigates how restaurant inspection outcomes vary depending on geography, income level, cuisine type, and season.
@@ -159,8 +158,6 @@ During cleaning we used Python with pandas within a Jupyter Notebook to complete
 - Check borough, cuisine, and inspection score distributions to identify any anomalies
 
 One challenge that we encountered during our analysis was that the original demographic dataset sourced from Kaggle, which we left joined into the inspection dataset on ZIP code, only provided median income information aggregated at the borough level. So when we initially built our dashboards with that merged data we were only able to evaluate income at the borough level, as each ZIP code within the same borough incorrectly had the same median income attached to it. That is why we ended up bringing in the Census ACS API to address this limitation, as it allowed us to obtain unique median household income estimates for every ZIP code in NYC. We then merged those values into the final dataset using ZIP code as the join key. The remaining other demographic variables from the Kaggle dataset were retained in the final merged dataset.
-
-One known data quality issue that we identified but did not fully resolve is the presence of a small number of records with negative median income values in the merged dataset, which appear to be data entry errors from the source. These records represent a small fraction of total observations and are visible as outlier dots on the far left of the income scatter plot on Dashboard 2. Future work should investigate and remove or correct these records.
 
 After cleaning and merging the datasets correctly, our final dataset had roughly 80,000 inspection observations and 16 key variables to use throughout our Tableau dashboards. The final dataset was then exported as a CSV file and connected directly into Tableau to begin developing the dashboards. In addition to the final CSV file, we have also included our full Jupyter Notebook in this repository that documents our complete cleaning and sourcing process.
 
