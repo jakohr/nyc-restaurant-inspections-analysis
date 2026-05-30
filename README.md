@@ -2,6 +2,8 @@
 
 **Jack Kohr and Alex Casarella | BUS 32130: Data Visualization for Decision-Making | Spring 2026**
 
+*All work was uploaded by the deadline Friday, May 29th; changed the .twb file to a .twbx file for better compatibility on Saturday, May 30th (as per the #HelpMe instruction in slack)
+
 ## Project Question
 
 This project explores patterns in New York City restaurant health inspections using demographic data and Tableau dashboards. Our analysis investigates how restaurant inspection outcomes vary depending on geography, income level, cuisine type, and season.
